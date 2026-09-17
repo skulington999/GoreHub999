@@ -3,293 +3,207 @@
 ============================================================ */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 html,
 body {
-    width: 100%;
-    min-height: 100%;
-
-    background: #000;
+  width: 100%;
+  min-height: 100%;
+  background: #000;
 }
-
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
-
 
 /* ============================================================
    ACCUEIL
 ============================================================ */
 
 .home {
-
-    position: relative;
-
-    width: 1310px;
-    min-height: 2048px;
-
-    margin: 0 auto;
-
+  position: relative;
+  width: 1310px;
+  min-height: 2048px;
+  margin: 0 auto;
 }
-
 
 /* BACKGROUND (VIDÉO) */
 
 .home-background {
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 1310px;
-    height: 2048px;
-
-    display: block;
-
-    object-fit: cover;
-
-    z-index: 1;
-
-    pointer-events: none;
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1310px;
+  height: 2048px;
+  display: block;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
 }
-
 
 .home-background-mobile {
-
-    display: none;
-
+  display: none;
 }
-
 
 /* LOGO */
 
 .logo {
-
-    position: absolute;
-
-    z-index: 10;
-
-    /*
-        CHANGE CES VALEURS
-        POUR PLACER TON LOGO
-    */
-
-    top: 50px;
-    left: 50px;
-
-    width: 180px;
-    height: auto;
-
-    pointer-events: none;
-
+  position: absolute;
+  z-index: 10;
+  top: 50px;
+  left: 50px;
+  width: 180px;
+  height: auto;
+  pointer-events: none;
 }
-
 
 /* ============================================================
    LISTE DES VIDÉOS DE L'ACCUEIL
 ============================================================ */
 
 .home-video-list {
-
-    position: absolute;
-
-    z-index: 20;
-
-    /*
-        À ADAPTER À TON DESIGN
-    */
-
-    top: 300px;
-    left: 100px;
-
-    width: 1110px;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap: 30px;
-
+  position: absolute;
+  z-index: 20;
+  top: 300px;
+  left: 100px;
+  width: 1110px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 }
-
 
 /* ============================================================
    MINIATURE
 ============================================================ */
 
 .home-video {
-
-    display: block;
-
-    text-decoration: none;
-
-    cursor: pointer;
-
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
 }
-
 
 .thumbnail {
-
-    position: relative;
-
-    width: 291px;
-    height: 138px;
-
-    overflow: hidden;
-
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
-
 
 /* IMAGE DE BASE */
 
 .thumbnail > img:first-child {
-
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-
 
 /* ============================================================
    PNG PAR-DESSUS
 ============================================================ */
 
 .thumbnail-overlay {
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: fill;
-
-    pointer-events: none;
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
 }
-
 
 /* EFFET AU SURVOL */
 
 .home-video:hover .thumbnail-overlay,
 .side-video:hover .thumbnail-overlay {
-
-    opacity: 0.8;
-
+  opacity: 0.8;
 }
-
 
 /* ============================================================
    PAGE VIDÉO
 ============================================================ */
 
 .video-page {
-
-    position: relative;
-
-    width: 1980px;
-    min-height: 3000px;
-
-    margin: 0 auto;
-
+  position: relative;
+  width: 1920px;
+  min-height: 3000px;
+  margin: 0 auto;
 }
-
 
 /* BACKGROUND */
 
 .video-background {
-
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 1980px;
-    height: 3000px;
-
-    display: block;
-
-    z-index: 1;
-
-    pointer-events: none;
-
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 3000px;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
 }
 
-
-/* ============================================================
-   VIDÉO YOUTUBE
-============================================================ */
+/* VIDÉO YOUTUBE */
 
 .main-video {
-
-    position: absolute;
-
-    z-index: 30;
-
-    border: none;
-
-    left: 17px;
-    top: 53px;
-
-    width: 1137px;
-    height: 463px;
-
+  position: absolute;
+  z-index: 30;
+  border: none;
+  left: 48px;
+  top: 84px;
+  width: 1063px;
+  height: 396px;
 }
 
-
-/* ============================================================
-   VIDÉOS À DROITE
-============================================================ */
+/* VIDÉOS À DROITE (POSITIONNEMENT INDIVIDUEL) */
 
 .side-video-list {
-
-    position: absolute;
-
-    z-index: 30;
-
-    left: 1187px;
-    top: 114px;
-
-    width: 291px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 30px;
-
+  display: contents;
 }
-
-
-/* CARTE VIDÉO */
 
 .side-video {
-
-    display: block;
-
-    width: 100%;
-
-    text-decoration: none;
-
-    cursor: pointer;
-
+  position: absolute;
+  z-index: 30;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
 }
 
+/* Positionnement sur-mesure de chaque vignette */
+.side-video:nth-child(1)  { left: 1151px; top: 113px;  width: 291px; height: 148px; }
+.side-video:nth-child(2)  { left: 1149px; top: 285px;  width: 296px; height: 145px; }
+.side-video:nth-child(3)  { left: 1145px; top: 458px;  width: 293px; height: 144px; }
+.side-video:nth-child(4)  { left: 1149px; top: 625px;  width: 291px; height: 139px; }
+.side-video:nth-child(5)  { left: 1149px; top: 790px;  width: 294px; height: 146px; }
+.side-video:nth-child(6)  { left: 1149px; top: 962px;  width: 294px; height: 145px; }
+.side-video:nth-child(7)  { left: 1154px; top: 1150px; width: 283px; height: 144px; }
+.side-video:nth-child(8)  { left: 1149px; top: 1326px; width: 291px; height: 153px; }
+.side-video:nth-child(9)  { left: 1145px; top: 1510px; width: 295px; height: 128px; }
+.side-video:nth-child(10) { left: 1149px; top: 1675px; width: 289px; height: 126px; }
+
+/* TITRES POSITIONNÉS RELATIVEMENT À CHAQUE MINIATURE */
+
+.video-title {
+  position: absolute;
+  font-family: "Press Start 2P", cursive;
+  font-size: 12px;
+  color: #ff3b3b;
+  line-height: 1.4;
+}
+
+.side-video:nth-child(1)  .video-title { left: 326px; top: 51px; width: 341px; }
+.side-video:nth-child(2)  .video-title { left: 316px; top: 55px; width: 372px; }
+.side-video:nth-child(3)  .video-title { left: 329px; top: 46px; width: 270px; }
+.side-video:nth-child(4)  .video-title { left: 321px; top: 52px; width: 197px; }
+.side-video:nth-child(5)  .video-title { left: 319px; top: 50px; width: 235px; }
+.side-video:nth-child(6)  .video-title { left: 321px; top: 48px; width: 342px; }
+.side-video:nth-child(7)  .video-title { left: 318px; top: 46px; width: 180px; }
+.side-video:nth-child(8)  .video-title { left: 316px; top: 48px; width: 317px; }
+.side-video:nth-child(9)  .video-title { left: 320px; top: 22px; width: 363px; }
+.side-video:nth-child(10) .video-title { left: 323px; top: 31px; width: 154px; }
 
 /* ============================================================
    MOBILE
@@ -297,155 +211,100 @@ body {
 
 @media (max-width: 700px) {
 
-
-    body {
-        overflow-x: hidden;
-    }
-
-
-    /* --------------------------------
-       ACCUEIL
-    -------------------------------- */
-
-    .home {
-
-        width: 100%;
-        min-height: 100vh;
-
-        margin: 0;
-
-    }
-
-
-    .home-background {
-
-        width: 100%;
-        height: auto;
-
-    }
-
-
-    .home-background-desktop {
-
-        display: none;
-
-    }
-
-
-    .home-background-mobile {
-
-        display: block;
-
-    }
-
-
-    .logo {
-
-        top: 20px;
-        left: 20px;
-
-        width: 120px;
-
-    }
-
-
-    .home-video-list {
-
-        position: relative;
-
-        top: auto;
-        left: auto;
-
-        width: calc(100% - 40px);
-
-        margin: 180px 20px 40px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 20px;
-
-    }
-
-
-    .home-video {
-
-        width: 100%;
-
-    }
-
-
-    /* --------------------------------
-       PAGE VIDÉO
-    -------------------------------- */
-
-    .video-page {
-
-        width: 100%;
-        min-height: 100vh;
-
-        margin: 0;
-
-    }
-
-
-    .video-background {
-
-        width: 100%;
-        height: auto;
-
-    }
-
-
-    /* VIDÉO */
-
-    .main-video {
-
-        position: relative;
-
-        top: auto;
-        left: auto;
-
-        display: block;
-
-        width: calc(100% - 40px);
-
-        height: auto;
-
-        aspect-ratio: 16 / 9;
-
-        margin: 150px 20px 30px;
-
-    }
-
-
-    /* VIDÉOS À DROITE → SOUS LA VIDÉO */
-
-    .side-video-list {
-
-        position: relative;
-
-        top: auto;
-        left: auto;
-
-        width: calc(100% - 40px);
-
-        margin: 0 20px 40px;
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 20px;
-
-    }
-
-
-    .side-video {
-
-        width: 100%;
-
-    }
-
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ACCUEIL */
+
+  .home {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .home-background {
+    width: 100%;
+    height: auto;
+  }
+
+  .home-background-desktop {
+    display: none;
+  }
+
+  .home-background-mobile {
+    display: block;
+  }
+
+  .logo {
+    top: 20px;
+    left: 20px;
+    width: 120px;
+  }
+
+  .home-video-list {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: calc(100% - 40px);
+    margin: 180px 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .home-video {
+    width: 100%;
+  }
+
+  /* PAGE VIDÉO */
+
+  .video-page {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .video-background {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-video {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    width: calc(100% - 40px);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    margin: 150px 20px 30px;
+  }
+
+  .side-video-list {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: calc(100% - 40px);
+    margin: 0 20px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .side-video {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .video-title {
+    position: relative;
+    left: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    margin-top: 8px;
+  }
 }
