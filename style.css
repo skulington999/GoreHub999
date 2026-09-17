@@ -39,7 +39,7 @@ body {
 }
 
 
-/* BACKGROUND */
+/* BACKGROUND (VIDÉO) */
 
 .home-background {
 
@@ -53,9 +53,18 @@ body {
 
     display: block;
 
+    object-fit: cover;
+
     z-index: 1;
 
     pointer-events: none;
+
+}
+
+
+.home-background-mobile {
+
+    display: none;
 
 }
 
@@ -318,6 +327,20 @@ body {
 
         width: 100%;
         height: auto;
+
+    }
+
+
+    .home-background-desktop {
+
+        display: none;
+
+    }
+
+
+    .home-background-mobile {
+
+        display: block;
 
     }
 
