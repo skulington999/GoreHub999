@@ -3,16 +3,67 @@
 // ============================================================
 
 const videos = [
-    { id: 1,  youtube: "v0JfA1s29oA" },
-    { id: 2,  youtube: "QXs85oZxO3A" },
-    { id: 3,  youtube: "rmjp6oRMLkQ" },
-    { id: 4,  youtube: "h6wMSm9dB0o" },
-    { id: 5,  youtube: "Qk7o7Izg8OA" },
-    { id: 6,  youtube: "buUvuXJKCHA" },
-    { id: 7,  youtube: "BrvVD87H-V0" },
-    { id: 8,  youtube: "w0OSgYWMAdY" },
-    { id: 9,  youtube: "Zkdfd6jrxkY" },
-    { id: 10, youtube: "RWNEre0E-5A" }
+
+    {
+        id: 1,
+        youtube: "v0JfA1s29oA",
+        title: "baDDi3_z0N3"
+    },
+
+    {
+        id: 2,
+        youtube: "QXs85oZxO3A",
+        title: "i_s33_sNak3S"
+    },
+
+    {
+        id: 3,
+        youtube: "rmjp6oRMLkQ",
+        title: "L3anSp1LL"
+    },
+
+    {
+        id: 4,
+        youtube: "h6wMSm9dB0o",
+        title: "pL4yaH"
+    },
+
+    {
+        id: 5,
+        youtube: "Qk7o7Izg8OA",
+        title: "oFF_a_X"
+    },
+
+    {
+        id: 6,
+        youtube: "buUvuXJKCHA",
+        title: "burnYOur3y3s"
+    },
+
+    {
+        id: 7,
+        youtube: "BrvVD87H-V0",
+        title: "sP!T_It"
+    },
+
+    {
+        id: 8,
+        youtube: "w0OSgYWMAdY",
+        title: "w1d3_B0dy"
+    },
+
+    {
+        id: 9,
+        youtube: "Zkdfd6jrxkY",
+        title: "b0NNie_bLU3"
+    },
+
+    {
+        id: 10,
+        youtube: "RWNEre0E-5A",
+        title: "s1NNr"
+    }
+
 ];
 
 
@@ -61,6 +112,16 @@ function createVideoThumbnail(video, className) {
     thumbnail.appendChild(overlay);
 
     link.appendChild(thumbnail);
+
+
+    // TITRE
+    const title = document.createElement("p");
+
+    title.className = "video-title";
+
+    title.textContent = video.title;
+
+    link.appendChild(title);
 
 
     return link;
