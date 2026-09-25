@@ -308,3 +308,237 @@ body {
     margin-top: 8px;
   }
 }
+/* =========================================================
+   GOREHUB — INTERACTIVE LAYER
+   Même palette que la page : presque noir + rouge/orange.
+   Modifie les variables ici pour coller exactement à ton PNG.
+   ========================================================= */
+
+:root {
+  --gh-bg: #100000;
+  --gh-panel: #190000;
+  --gh-panel-2: #210000;
+  --gh-red: #ef2b00;
+  --gh-red-dark: #8f1700;
+  --gh-text: #f04a21;
+  --gh-text-soft: #aa351d;
+  --gh-black: #050000;
+  --gh-border: #4d1007;
+}
+
+.gh-video-meta,
+.gh-comments {
+  color: var(--gh-text);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gh-video-meta {
+  width: 100%;
+  margin-top: 8px;
+}
+
+#gh-video-title {
+  margin: 0 0 7px;
+  color: var(--gh-text);
+  font-size: 17px;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: .15px;
+}
+
+.gh-show-more {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--gh-text);
+  padding: 0;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.gh-show-more span {
+  display: inline-block;
+  margin-left: 3px;
+  transition: transform .18s ease;
+}
+
+.gh-show-more[aria-expanded="true"] span {
+  transform: rotate(180deg);
+}
+
+.gh-description {
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: var(--gh-panel);
+  border: 1px solid var(--gh-border);
+  border-radius: 2px;
+  color: var(--gh-text);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.gh-description p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.gh-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.gh-vote-group {
+  display: flex;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--gh-panel);
+  border: 1px solid var(--gh-border);
+}
+
+.gh-vote-btn {
+  border: 0;
+  border-right: 1px solid var(--gh-border);
+  background: transparent;
+  color: var(--gh-text);
+  padding: 6px 9px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.gh-vote-btn:last-child {
+  border-right: 0;
+}
+
+.gh-vote-btn:hover,
+.gh-vote-btn[aria-pressed="true"] {
+  background: var(--gh-red-dark);
+  color: #fff;
+}
+
+.gh-comments {
+  margin-top: 16px;
+}
+
+.gh-comments-head {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  margin-bottom: 9px;
+}
+
+.gh-comments-head h2 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+#gh-comment-count {
+  font-size: 11px;
+  opacity: .7;
+}
+
+.gh-comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.gh-comment {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 9px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(145, 30, 10, .45);
+}
+
+.gh-comment-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #080000;
+  border: 1px solid var(--gh-red-dark);
+  display: grid;
+  place-items: center;
+  color: var(--gh-red);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.gh-comment-user {
+  margin-bottom: 2px;
+  color: var(--gh-text);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.gh-comment-body {
+  color: #bf3d22;
+  font-size: 12px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.gh-comment-date {
+  margin-top: 3px;
+  color: #7d2717;
+  font-size: 9px;
+}
+
+.gh-comment-form {
+  margin-top: 13px;
+  display: grid;
+  gap: 7px;
+}
+
+.gh-comment-form input,
+.gh-comment-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--gh-border);
+  border-radius: 2px;
+  background: var(--gh-panel);
+  color: var(--gh-text);
+  padding: 8px 9px;
+  outline: none;
+  font: inherit;
+  font-size: 12px;
+}
+
+.gh-comment-form input:focus,
+.gh-comment-form textarea:focus {
+  border-color: var(--gh-red);
+}
+
+.gh-comment-form input::placeholder,
+.gh-comment-form textarea::placeholder {
+  color: #722316;
+}
+
+.gh-comment-form button {
+  justify-self: start;
+  border: 1px solid var(--gh-red-dark);
+  border-radius: 2px;
+  background: var(--gh-panel-2);
+  color: var(--gh-text);
+  padding: 6px 12px;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.gh-comment-form button:hover {
+  background: var(--gh-red-dark);
+  color: #fff;
+}
+
+/* Le bouton reste lisible quand un PNG existe derrière. */
+.gh-video-meta,
+.gh-comments {
+  position: relative;
+  z-index: 5;
+}
