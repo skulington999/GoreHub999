@@ -7,61 +7,71 @@ const videos = [
     {
         id: 1,
         youtube: "v0JfA1s29oA",
-        title: "baDDi3_z0N3"
+        title: "baDDi3_z0N3",
+        description: "9.9.9. lE sOl mAngE tOn oMbrE. tU nE l'A pAs vUe dEpUis 9 jOuRs. mAiS eLLe t'A vU. 9:09. 9:09. 9:09. iL n'Y a pAs d'AuTrE hEuRe.",
     },
 
     {
         id: 2,
         youtube: "QXs85oZxO3A",
-        title: "i_s33_sNak3S"
+        title: "i_s33_sNak3S",
+        description: "ta bOucHe eSt uN cOrrIdoR. 9 pOrTeS. tOuTeS fErMéeS dE l'AuTrE cÔté. tU mArChes vErS lE bAs. 999 mArChes. lA 1000èMe existe ?",
     },
 
     {
         id: 3,
         youtube: "rmjp6oRMLkQ",
-        title: "L3anSp1LL"
+        title: "L3anSp1LL",
+        description: "9 dEnTs. 9 dE 9. 99. 999. 9999. tU cOmPtes lEs dEntS dU mIrOiR. iL eN a uN dE mOiNs. tU eN aS uN dE mOiNs. qUi a pRiS l'AuTre?",
     },
 
     {
         id: 4,
         youtube: "h6wMSm9dB0o",
-        title: "pL4yaH"
+        title: "pL4yaH",
+        description: "lE cIel eSt uN pLaFoNd. 9mm. iL dEsCend. tU nE dOrS pAs. tU n'As jAmAiS dOrMi. 9 vIes. 9 lIts. 9 dRaps tIèdEs. 9:09:09:09:09.",
     },
 
     {
         id: 5,
         youtube: "Qk7o7Izg8OA",
-        title: "oFF_a_X"
+        title: "oFF_a_X",
+        description: "9 gOuTtes. dU dEdAnS. sUr lA pAuPièRe. tU nE pEuX pAs cLiGnEr. tU nE pEuX pAs cRiEr. 999. 998. 997. lE mUr rEsPiRe. 9:09.",
     },
 
     {
         id: 6,
         youtube: "buUvuXJKCHA",
-        title: "burnYOur3y3s"
+        title: "burnYOur3y3s",
+        description: "lA rAdIo tE dIt tOn nOm. 9 fOiS. tU n'As pAs rEpOnDu. 9 fOiS. tU n'As pAs rEpOnDu. 9 fOiS. c'EsT lUi qUi rEpOnD à tA pLaCe. 9.",
     },
 
     {
         id: 7,
         youtube: "BrvVD87H-V0",
-        title: "sP!T_It"
+        title: "sP!T_It",
+        description: "9 èMe éTaGe. pAs d'AScEnSeUr. jAmAiS eU d'AScEnSeUr. mAiS tOn cOrpS sE sOuVieNt d'EtRe mOnTé. 9 fOiS. 9 vIes. 9:09. eNcOrE.",
     },
 
     {
         id: 8,
         youtube: "w0OSgYWMAdY",
-        title: "w1d3_B0dy"
+        title: "w1d3_B0dy",
+        description: "lE 9 eSt uN tRoU. 0 eSt uN tRoU. tA bOucHe = 3 tRoUs. 9:09:09:09. 4 tRoUs. tU nE pEuX pAs cRiEr. iL écoute. iL a tOuJours écOuté. 9.",
     },
 
     {
         id: 9,
         youtube: "Zkdfd6jrxkY",
-        title: "b0NNie_bLU3"
+        title: "b0NNie_bLU3",
+        description: "9 dRaps. 9 lIts. 9 cHambRes. tOuTeS tIèdEs. tOuTeS vIdEs. mAiS lE 9èMe eSt tIèDe dE l'AuTrE cÔté. tU n'Es pAs dU bOn cÔté. 9:09.",
     },
 
     {
         id: 10,
         youtube: "RWNEre0E-5A",
-        title: "s1NNr"
+        title: "s1NNr",
+        description: "tU dOrS dEbOuT. 9 h. 9 j. 9 v. lE sOl = tOn dOs. lE cIel = tOn vEnTre. 999 bAts. lE 1000èMe n'ESt pAs pOuR tOi. 9:09:09.",
     }
 
 ];
