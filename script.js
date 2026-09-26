@@ -161,7 +161,9 @@ if (homeVideoList) {
     });
 
 }
-
+// ============================================================
+// PAGE VIDÉO
+// ============================================================
 
 const youtubeVideo = document.getElementById("youtube-video");
 
