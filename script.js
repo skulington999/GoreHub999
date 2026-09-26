@@ -183,6 +183,10 @@ if (youtubeVideo) {
     // YOUTUBE
     youtubeVideo.src = `https://www.youtube-nocookie.com/embed/${currentVideo.youtube}?rel=0`;
 
+    // SAUVEGARDE L'ID + RENDU
+    localStorage.setItem(CURRENT_VIDEO_KEY, currentId);
+    renderVideo(currentId);
+
 }   
 // ============================================================
 // MINIATURES À DROITE DE LA VIDÉO
