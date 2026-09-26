@@ -309,7 +309,7 @@ body {
   }
 }
 /* =========================================================
-   GOREHUB — INTERACTIVE LAYER
+   GOREHUB — INTERACTIVE LAYER (positionné sur le PNG)
    ========================================================= */
 
 :root {
@@ -324,23 +324,21 @@ body {
   --gh-border: #4d1007;
 }
 
-/* Force les sections à passer sous la vidéo */
-.gh-video-meta,
-.gh-comments {
-  position: relative;
-  z-index: 40;
+/* --- DESCRIPTION (titre + desc + votes) --- */
+.gh-video-meta {
+  position: absolute;
+  top: XXXpx;    /* ← remplace par le top de ta zone dans le PNG */
+  left: XXXpx;   /* ← remplace par le left de ta zone */
+  width: 1037px;
+  height: 66px;
+  overflow: hidden;
   color: var(--gh-text);
   font-family: Arial, Helvetica, sans-serif;
-  clear: both;
-  display: block;
-  width: 100%;
-}   
-.gh-video-meta {
-  margin-top: 490px;
+  z-index: 5;
 }
 
 #gh-video-title {
-  margin: 0 0 7px;
+  margin: 0 0 4px;
   color: var(--gh-text);
   font-size: 17px;
   line-height: 1.25;
@@ -372,7 +370,10 @@ body {
 }
 
 .gh-description {
-  margin-top: 8px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
   padding: 10px 12px;
   background: var(--gh-panel);
   border: 1px solid var(--gh-border);
@@ -380,6 +381,7 @@ body {
   color: var(--gh-text);
   font-size: 12px;
   line-height: 1.45;
+  z-index: 10;
 }
 
 .gh-description p {
@@ -390,7 +392,7 @@ body {
 .gh-actions {
   display: flex;
   justify-content: flex-end;
-  margin-top: 8px;
+  margin-top: 4px;
 }
 
 .gh-vote-group {
@@ -406,7 +408,7 @@ body {
   border-right: 1px solid var(--gh-border);
   background: transparent;
   color: var(--gh-text);
-  padding: 6px 9px;
+  padding: 4px 9px;
   font-size: 12px;
   cursor: pointer;
 }
@@ -421,8 +423,17 @@ body {
   color: #fff;
 }
 
+/* --- COMMENTAIRES (formulaire + liste) --- */
 .gh-comments {
-  margin-top: 16px;
+  position: absolute;
+  top: XXXpx;    /* ← remplace par le top de ta zone dans le PNG */
+  left: XXXpx;   /* ← remplace par le left de ta zone */
+  width: 1089px;
+  height: 929px;
+  overflow-y: auto;
+  color: var(--gh-text);
+  font-family: Arial, Helvetica, sans-serif;
+  z-index: 5;
 }
 
 .gh-comments-head {
