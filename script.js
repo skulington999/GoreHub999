@@ -153,51 +153,28 @@ if (homeVideoList) {
 }
 
 
-// ============================================================
-// PAGE VIDÉO
-// ============================================================
-
-const youtubeVideo =
-    document.getElementById("youtube-video");
-    document.getElementById("gh-video-title").textContent = video.title;
-    document.getElementById("gh-description-text").textContent = video.description;
+const youtubeVideo = document.getElementById("youtube-video");
 
 if (youtubeVideo) {
 
-    const params =
-        new URLSearchParams(
-            window.location.search
-        );
+    const params = new URLSearchParams(window.location.search);
 
+    let currentId = Number(params.get("id"));
 
-    let currentId =
-        Number(params.get("id"));
-
-
-    // SI L'ID N'EXISTE PAS → VIDÉO 1
-    if (
-        !currentId ||
-        currentId < 1 ||
-        currentId > videos.length
-    ) {
-
+    if (!currentId || currentId < 1 || currentId > videos.length) {
         currentId = 1;
-
     }
 
-
-    const currentVideo =
-        videos.find(
-            video => video.id === currentId
-        );
-
+    const currentVideo = videos.find(video => video.id === currentId);
 
     // YOUTUBE
-    youtubeVideo.src =
-        `https://www.youtube-nocookie.com/embed/${currentVideo.youtube}?rel=0`;
+    youtubeVideo.src = `https://www.youtube-nocookie.com/embed/${currentVideo.youtube}?rel=0`;
 
-}
+    // TITRE + DESCRIPTION
+    document.getElementById("gh-video-title").textContent = currentVideo.title;
+    document.getElementById("gh-description-text").textContent = currentVideo.description;
 
+}   
 
 // ============================================================
 // MINIATURES À DROITE DE LA VIDÉO
