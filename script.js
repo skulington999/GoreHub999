@@ -182,13 +182,9 @@ if (youtubeVideo) {
     // YOUTUBE
     youtubeVideo.src = `https://www.youtube-nocookie.com/embed/${currentVideo.youtube}?rel=0`;
 
-    console.log("TITRE:", currentVideo.title);
-    
     // TITRE + DESCRIPTION
     document.getElementById("gh-video-title").textContent = currentVideo.title;
     document.getElementById("gh-description-text").textContent = currentVideo.description;
-
-}   
 
 // ============================================================
 // MINIATURES À DROITE DE LA VIDÉO
@@ -521,8 +517,8 @@ if (sideVideoList) {
       return;
     }
 
-    localStorage.setItem(CURRENT_VIDEO_KEY, videoId);
-    renderVideo(videoId);
+    localStorage.setItem(CURRENT_VIDEO_KEY, currentId);
+    renderVideo(currentId);
 
     // Quand on change de vidéo, on referme "afficher plus".
     const button = document.getElementById("gh-show-more");
