@@ -575,37 +575,18 @@ body {
   background-color: #100300;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .video-background {
-    display: none;
-  }
-
-  .main-video {
-    position: static;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-  }
-
+@media (max-width: 700px) {
   #gh-video-title,
   .gh-description-wrap,
   .gh-actions,
   .gh-comments {
     position: static;
-    width: 100%;
+    width: calc(100% - 40px);
     height: auto;
     top: auto;
     left: auto;
     overflow: visible;
-    margin: 10px 0;
-  }
-
-  .side-video-list {
-    position: static;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    margin: 10px 20px;
+    background-color: transparent;
   }
 }   
