@@ -182,6 +182,8 @@ if (youtubeVideo) {
     // YOUTUBE
     youtubeVideo.src = `https://www.youtube-nocookie.com/embed/${currentVideo.youtube}?rel=0`;
 
+    console.log("TITRE:", currentVideo.title);
+    
     // TITRE + DESCRIPTION
     document.getElementById("gh-video-title").textContent = currentVideo.title;
     document.getElementById("gh-description-text").textContent = currentVideo.description;
