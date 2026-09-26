@@ -552,3 +552,36 @@ body {
   background: var(--gh-red-dark);
   color: #fff;
 }   
+@media (max-width: 768px) {
+  .video-background {
+    display: none;
+  }
+
+  .main-video {
+    position: static;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+  }
+
+  #gh-video-title,
+  .gh-description-wrap,
+  .gh-actions,
+  .gh-comments {
+    position: static;
+    width: 100%;
+    height: auto;
+    top: auto;
+    left: auto;
+    overflow: visible;
+    margin: 10px 0;
+  }
+
+  .side-video-list {
+    position: static;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}   
