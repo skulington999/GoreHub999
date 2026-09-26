@@ -161,6 +161,7 @@ if (homeVideoList) {
     });
 
 }
+
 // ============================================================
 // PAGE VIDÉO
 // ============================================================
@@ -182,10 +183,7 @@ if (youtubeVideo) {
     // YOUTUBE
     youtubeVideo.src = `https://www.youtube-nocookie.com/embed/${currentVideo.youtube}?rel=0`;
 
-    // TITRE + DESCRIPTION
-    document.getElementById("gh-video-title").textContent = currentVideo.title;
-    document.getElementById("gh-description-text").textContent = currentVideo.description;
-
+}   
 // ============================================================
 // MINIATURES À DROITE DE LA VIDÉO
 // ============================================================
