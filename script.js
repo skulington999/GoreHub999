@@ -237,83 +237,83 @@ if (sideVideoList) {
 
   const VIDEO_DATA = {
     video1: {
-      title: "6 bumY0ur3y3s",
+      title: "baDDi3_z0N3",
       description:
-        "Une vidéo de Gorehub.\\n\\nDescription personnalisable : remplace ce texte directement dans VIDEO_DATA.",
-      likes: 137,
-      dislikes: 12,
+        "9.9.9. lE sOl mAngE tOn oMbrE. tU nE l'A pAs vUe dEpUis 9 jOuRs. mAiS eLLe t'A vU. 9:09. 9:09. 9:09. iL n'Y a pAs d'AuTrE hEuRe.",
+      likes: 0,
+      dislikes: 0,
     },
 
     video2: {
-      title: "be9bD_3N3",
+      title: "i_s33_sNak3S",
       description:
-        "Description de la deuxième vidéo.\\nTu peux mettre autant de texte que nécessaire.",
-      likes: 82,
-      dislikes: 7,
+        "ta bOucHe eSt uN cOrrIdoR. 9 pOrTeS. tOuTeS fErMéeS dE l'AuTrE cÔté. tU mArChes vErS lE bAs. 999 mArChes. lA 1000èMe existe ?",
+      likes: 0,
+      dislikes: 0,
     },
 
     video3: {
-      title: "n_33_uhk5",
+      title: "L3anSp1LL",
       description:
-        "Description de la troisième vidéo.",
-      likes: 54,
-      dislikes: 9,
+        "9 dEnTs. 9 dE 9. 99. 999. 9999. tU cOmPtes lEs dEntS dU mIrOiR. iL eN a uN dE mOiNs. tU eN aS uN dE mOiNs. qUi a pRiS l'AuTre?",
+      likes: 0,
+      dislikes: 0,
     },
 
     video4: {
-      title: "I3onSpILL",
+      title: "pL4yaH",
       description:
-        "Description de la quatrième vidéo.",
-      likes: 31,
-      dislikes: 4,
+        "lE cIel eSt uN pLaFoNd. 9mm. iL dEsCend. tU nE dOrS pAs. tU n'As jAmAiS dOrMi. 9 vIes. 9 lIts. 9 dRaps tIèdEs. 9:09:09:09:09.",
+      likes: 0,
+      dislikes: 0,
     },
 
     video5: {
-      title: "eK4y9H",
+      title: "oFF_a_X",
       description:
-        "Description de la cinquième vidéo.",
-      likes: 61,
-      dislikes: 3,
+        "9 gOuTtes. dU dEdAnS. sUr lA pAuPièRe. tU nE pEuX pAs cLiGnEr. tU nE pEuX pAs cRiEr. 999. 998. 997. lE mUr rEsPiRe. 9:09.",
+      likes: 0,
+      dislikes: 0,
     },
 
     video6: {
-      title: "b4dd1e_9x",
+      title: "burnYOur3y3s",
       description:
-        "Description de la sixième vidéo.",
-      likes: 45,
-      dislikes: 6,
+        "lA rAdIo tE dIt tOn nOm. 9 fOiS. tU n'As pAs rEpOnDu. 9 fOiS. tU n'As pAs rEpOnDu. 9 fOiS. c'EsT lUi qUi rEpOnD à tA pLaCe. 9.",
+      likes: 0,
+      dislikes: 0,
     },
 
     video7: {
-      title: "9MI_1u",
+      title: "sP!T_It",
       description:
-        "Description de la septième vidéo.",
-      likes: 20,
-      dislikes: 2,
+        "9 èMe éTaGe. pAs d'AScEnSeUr. jAmAiS eU d'AScEnSeUr. mAiS tOn cOrpS sE sOuVieNt d'EtRe mOnTé. 9 fOiS. 9 vIes. 9:09. eNcOrE.",
+      likes: 0,
+      dislikes: 0,
     },
 
     video8: {
-      title: "v3l_B0by",
+      title: "w1d3_B0dy",
       description:
-        "Description de la huitième vidéo.",
-      likes: 94,
-      dislikes: 11,
+        "lE 9 eSt uN tRoU. 0 eSt uN tRoU. tA bOucHe = 3 tRoUs. 9:09:09:09. 4 tRoUs. tU nE pEuX pAs cRiEr. iL écoute. iL a tOuJours écOuté. 9.",
+      likes: 0,
+      dislikes: 0,
     },
 
     video9: {
-      title: "nobody_came_for_me",
+      title: "b0NNie_bLU3",
       description:
-        "Description de la neuvième vidéo.",
-      likes: 66,
-      dislikes: 5,
+        "9 dRaps. 9 lIts. 9 cHambRes. tOuTeS tIèdEs. tOuTeS vIdEs. mAiS lE 9èMe eSt tIèDe dE l'AuTrE cÔté. tU n'Es pAs dU bOn cÔté. 9:09.",
+      likes: 0,
+      dislikes: 0,
     },
 
     video10: {
-      title: "s0nn",
+      title: "s1NNr",
       description:
-        "Description de la dixième vidéo.",
-      likes: 39,
-      dislikes: 8,
+        "tU dOrS dEbOuT. 9 h. 9 j. 9 v. lE sOl = tOn dOs. lE cIel = tOn vEnTre. 999 bAts. lE 1000èMe n'ESt pAs pOuR tOi. 9:09:09.",
+      likes: 0,
+      dislikes: 0,
     },
   };
 
