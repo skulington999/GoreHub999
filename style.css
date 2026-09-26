@@ -311,7 +311,7 @@ body {
 /* =========================================================
    GOREHUB — INTERACTIVE LAYER (positionné sur le PNG)
    ========================================================= */
-
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');   
 :root {
   --gh-bg: #100000;
   --gh-panel: #190000;
@@ -327,13 +327,13 @@ body {
 /* --- DESCRIPTION (titre + desc + votes) --- */
 .gh-video-meta {
   position: absolute;
-  top: XXXpx;    /* ← remplace par le top de ta zone dans le PNG */
-  left: XXXpx;   /* ← remplace par le left de ta zone */
+  top: 609px;
+  left: 95px;
   width: 1037px;
   height: 66px;
   overflow: hidden;
   color: var(--gh-text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'VT323',monospace;
   z-index: 5;
 }
 
@@ -426,13 +426,13 @@ body {
 /* --- COMMENTAIRES (formulaire + liste) --- */
 .gh-comments {
   position: absolute;
-  top: XXXpx;    /* ← remplace par le top de ta zone dans le PNG */
-  left: XXXpx;   /* ← remplace par le left de ta zone */
+  top: 1988px;    /* ← remplace par le top de ta zone dans le PNG */
+  left: 32px;   /* ← remplace par le left de ta zone */
   width: 1089px;
   height: 929px;
   overflow-y: auto;
   color: var(--gh-text);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'VT323', monospace;
   z-index: 5;
 }
 
