@@ -415,8 +415,6 @@ if (sideVideoList) {
     const likeButton = document.getElementById("gh-like");
     const dislikeButton = document.getElementById("gh-dislike");
 
-    if (title) title.textContent = video.title;
-    if (description) description.textContent = video.description;
 
     if (likeCount) {
       likeCount.textContent = String(video.likes + (interaction.myVote === "like" ? 1 : 0));
