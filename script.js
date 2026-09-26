@@ -159,7 +159,8 @@ if (homeVideoList) {
 
 const youtubeVideo =
     document.getElementById("youtube-video");
-
+    document.getElementById("gh-video-title").textContent = video.title;
+    document.getElementById("gh-description-text").textContent = video.description;
 
 if (youtubeVideo) {
 
