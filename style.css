@@ -327,13 +327,13 @@ body {
 /* --- DESCRIPTION (titre + desc + votes) --- */
 .gh-video-meta {
   position: absolute;
-  top: 609px;
-  left: 95px;
-  width: 1037px;
-  height: 66px;
+  top: 495px;
+  left: 38px;
+  width: 389px;
+  height: 51px;
   overflow: hidden;
   color: var(--gh-text);
-  font-family: 'VT323',monospace;
+  font-family: 'VT323', monospace;
   z-index: 5;
 }
 
@@ -390,9 +390,12 @@ body {
 }
 
 .gh-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 4px;
+  position: absolute;
+  top: 555px;
+  left: 724px;
+  width: 159px;
+  height: 36px;
+  z-index: 5;
 }
 
 .gh-vote-group {
