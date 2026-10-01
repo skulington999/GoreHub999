@@ -598,21 +598,11 @@ function setupComments() {
         reply.textContent = "3RROR_NIGHTM@R€_wR0NG_KEY";
       }
       reply.hidden = false;
-      // === FIN BOT ===
-
-      const interaction = getInteraction(videoId);
-      interaction.addedComments.push({
-        name,
-        text,
-        timestamp: Date.now()
-      });
-
-      saveState();
+      // === FIN BOT == //
       textInput.value = "";
       nameInput.value = "";
-      renderAddedComments(videoId);
     });
-  }   
+}
    document.addEventListener("DOMContentLoaded", () => {
     setupShowMore();
     setupVotes();
