@@ -480,7 +480,7 @@ if (sideVideoList) {
     }
   }
 
-  function setupComments() {
+ function setupComments() {
     const form = document.getElementById("gh-comment-form");
     const nameInput = document.getElementById("gh-comment-name");
     const textInput = document.getElementById("gh-comment-text");
@@ -496,8 +496,21 @@ if (sideVideoList) {
       if (!name || !text) return;
 
       const videoId = getCurrentVideoId();
-      const interaction = getInteraction(videoId);
 
+      // === BOT ===
+      const reply = document.getElementById("gh-bot-reply");
+      const botData = BOT_KEYWORDS[videoId];
+      const message = text.toLowerCase().trim();
+
+      if (botData && message.includes(botData.keyword.toLowerCase())) {
+        reply.textContent = botData.reply;
+      } else {
+        reply.textContent = "3RROR_NIGHTM@R€_wR0NG_KEY";
+      }
+      reply.hidden = false;
+      // === FIN BOT ===
+
+      const interaction = getInteraction(videoId);
       interaction.addedComments.push({
         name,
         text,
@@ -506,9 +519,10 @@ if (sideVideoList) {
 
       saveState();
       textInput.value = "";
+      nameInput.value = "";
       renderAddedComments(videoId);
     });
-  }
+}   
 
   function setVideo(videoId) {
     if (!VIDEO_DATA[videoId]) {
