@@ -531,27 +531,37 @@ if (sideVideoList) {
     setVideo,
     getVideoData: () => VIDEO_DATA,
   };
+const BOT_KEYWORDS = {
+  "B7hlrfZaPKA": { keyword: "baDDi3_z0N3", reply: "u think ur smart?" },
+  "OC9sQplwkEQ": { keyword: "i_s33_sNak3S", reply: "i can prove u wrong" },
+  "HEHVE61D9XY": { keyword: "L3anSp1LL", reply: "i know u wont get through it" },
+  "Zn74gkZzXjc": { keyword: "pL4yaH", reply: "that's not no funny shit, it is gore" },
+  "IbAcili5q5Y": { keyword: "oFF_a_X", reply: "i know u wanna see blood" },
+  "QsJOZCS-_Ss": { keyword: "burnYOur3y3s", reply: "eat my guts" },
+  "FV-x2SRXozU": { keyword: "sP!T_It", reply: "u gon end up like the others" },
+  "JfyQ9xlmqis": { keyword: "w1d3_B0dy", reply: "i wouldn't do that if i was you" },
+  "tEkw3fYdJW0": { keyword: "b0NNie_bLU3", reply: "smash ur head on ur keyboard" },
+  "n95hUyCutIY": { keyword: "s1NNr", reply: "Réponse 10 ! 🖤" },
+};   
+ function setupBotReply() {
+    document.getElementById('gh-comment-form').addEventListener('submit', function(e) {
+      const message = document.getElementById('gh-comment-text').value.toLowerCase().trim();
+      const reply = document.getElementById('gh-bot-reply');
+      const currentVideo = getCurrentVideoId();
 
- // === BOT COMMENTAIRE ===
-document.getElementById('gh-comment-form').addEventListener('submit', function(e) {
-    e.preventDefault();
+      const botData = BOT_KEYWORDS[currentVideo];
 
-    const message = document.getElementById('gh-comment-text').value.toLowerCase().trim();
-    const reply = document.getElementById('gh-bot-reply');
+      if (botData && message.includes(botData.keyword)) {
+        reply.textContent = botData.reply;
+      } else {
+        reply.textContent = "3RROR_NIGHTM@R€_wR0NG_KEY";
+      }
 
-    // Mot/phrase spéciale → réponse spéciale
-    if (message.includes("ton-mot-special")) {
-        reply.textContent = "Ta réponse spéciale ici !";
-    } else {
-        reply.textContent = "Merci pour ton commentaire ! 🖤";
-    }
-
-    reply.hidden = false;
-
-    // Réinitialiser le form
-    document.getElementById('gh-comment-text').value = '';
-    document.getElementById('gh-comment-name').value = '';
-});   
+      reply.hidden = false;
+      document.getElementById('gh-comment-text').value = '';
+      document.getElementById('gh-comment-name').value = '';
+    });
+  }
     document.addEventListener("DOMContentLoaded", () => {
     setupShowMore();
     setupVotes();
