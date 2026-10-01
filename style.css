@@ -588,5 +588,12 @@ body {
     overflow: visible;
     margin: 10px 20px;
     background-color: transparent;
-  }
+}   
+.gh-bot-reply {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 3px solid #ff0000;
+    color: #fff;
+    font-size: 0.9rem;
 }   
