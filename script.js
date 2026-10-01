@@ -532,7 +532,27 @@ if (sideVideoList) {
     getVideoData: () => VIDEO_DATA,
   };
 
-  document.addEventListener("DOMContentLoaded", () => {
+ // === BOT COMMENTAIRE ===
+document.getElementById('gh-comment-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const message = document.getElementById('gh-comment-text').value.toLowerCase().trim();
+    const reply = document.getElementById('gh-bot-reply');
+
+    // Mot/phrase spéciale → réponse spéciale
+    if (message.includes("ton-mot-special")) {
+        reply.textContent = "Ta réponse spéciale ici !";
+    } else {
+        reply.textContent = "Merci pour ton commentaire ! 🖤";
+    }
+
+    reply.hidden = false;
+
+    // Réinitialiser le form
+    document.getElementById('gh-comment-text').value = '';
+    document.getElementById('gh-comment-name').value = '';
+});   
+    document.addEventListener("DOMContentLoaded", () => {
     setupShowMore();
     setupVotes();
     setupComments();
