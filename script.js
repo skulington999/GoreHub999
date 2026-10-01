@@ -551,44 +551,71 @@ function setupComments() {
     setVideo,
     getVideoData: () => VIDEO_DATA,
   };
-const BOT_KEYWORDS = {
-  "video1": { keyword: "baDDi3_z0N3", reply: "u think ur smart?" },
-  "video2": { keyword: "i_s33_sNak3S", reply: "i can prove u wrong" },
-  "video3": { keyword: "L3anSp1LL", reply: "i know u wont get through it" },
-  "video4": { keyword: "pL4yaH", reply: "that's not no funny shit, it is gore" },
-  "video5": { keyword: "oFF_a_X", reply: "i know u wanna see blood" },
-  "video6": { keyword: "burnYOur3y3s", reply: "eat my guts" },
-  "video7": { keyword: "sP!T_It", reply: "u gon end up like the others" },
-  "video8": { keyword: "w1d3_B0dy", reply: "i wouldn't do that if i was you" },
-  "video9": { keyword: "b0NNie_bLU3", reply: "smash ur head on ur keyboard" },
-  "video10": { keyword: "s1NNr", reply: "https://youtu.be/W2Ae0MxW-WU" },
-};   
-function setupBotReply() {
-    const form = document.getElementById('gh-comment-form');
-    if (!form) return;  // ← si le formulaire n'existe pas (index.html), on sort
+  const BOT_KEYWORDS = {
+    "video1": { keyword: "baDDi3_z0N3", reply: "u think ur smart?" },
+    "video2": { keyword: "i_s33_sNak3S", reply: "i can prove u wrong" },
+    "video3": { keyword: "L3anSp1LL", reply: "i know u wont get through it" },
+    "video4": { keyword: "pL4yaH", reply: "that's not no funny shit, it is gore" },
+    "video5": { keyword: "oFF_a_X", reply: "i know u wanna see blood" },
+    "video6": { keyword: "burnYOur3y3s", reply: "eat my guts" },
+    "video7": { keyword: "sP!T_It", reply: "u gon end up like the others" },
+    "video8": { keyword: "w1d3_B0dy", reply: "i wouldn't do that if i was you" },
+    "video9": { keyword: "b0NNie_bLU3", reply: "smash ur head on ur keyboard" },
+    "video10": { keyword: "s1NNr", reply: "https://youtu.be/W2Ae0MxW-WU" },
+  };
 
-    form.addEventListener('submit', function(e) {
-      const message = document.getElementById('gh-comment-text').value.toLowerCase().trim();
-      const reply = document.getElementById('gh-bot-reply');
-      const currentVideo = getCurrentVideoId();
+  function setupComments() {
+    const form = document.getElementById("gh-comment-form");
+    const nameInput = document.getElementById("gh-comment-name");
+    const textInput = document.getElementById("gh-comment-text");
 
-      const botData = BOT_KEYWORDS[currentVideo];
+    if (!form || !nameInput || !textInput) return;
 
-      if (botData && message.includes(botData.keyword.toLowerCase())) {
-        reply.textContent = botData.reply;
-      } else {
-        reply.textContent = "3RROR_NIGHTM@R€_wR0NG_KEY";
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      const name = nameInput.value.trim();
+      const text = textInput.value.trim();
+
+      if (!name || !text) return;
+
+      const videoId = getCurrentVideoId();
+
+      // === BOT ===
+      const reply = document.getElementById("gh-bot-reply");
+      const message = text.toLowerCase().trim();
+      let found = false;
+
+      for (const key in BOT_KEYWORDS) {
+        if (message.includes(BOT_KEYWORDS[key].keyword.toLowerCase())) {
+          reply.textContent = BOT_KEYWORDS[key].reply;
+          found = true;
+          break;
+        }
       }
 
+      if (!found) {
+        reply.textContent = "3RROR_NIGHTM@R€_wR0NG_KEY";
+      }
       reply.hidden = false;
-      document.getElementById('gh-comment-text').value = '';
-      document.getElementById('gh-comment-name').value = '';
+      // === FIN BOT ===
+
+      const interaction = getInteraction(videoId);
+      interaction.addedComments.push({
+        name,
+        text,
+        timestamp: Date.now()
+      });
+
+      saveState();
+      textInput.value = "";
+      nameInput.value = "";
+      renderAddedComments(videoId);
     });
-}
+  }   
    document.addEventListener("DOMContentLoaded", () => {
     setupShowMore();
     setupVotes();
-    setupBotReply();          // ← AVANT setupComments
     setupComments();
     renderVideo(getCurrentVideoId());
 });
