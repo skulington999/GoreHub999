@@ -480,7 +480,7 @@ if (sideVideoList) {
     }
   }
 
- function setupComments() {
+function setupComments() {
     const form = document.getElementById("gh-comment-form");
     const nameInput = document.getElementById("gh-comment-name");
     const textInput = document.getElementById("gh-comment-text");
@@ -496,16 +496,21 @@ if (sideVideoList) {
       if (!name || !text) return;
 
       const videoId = getCurrentVideoId();
-      console.log("videoId:", videoId);
-      console.log("botData:", BOT_KEYWORDS[videoId]);
+
       // === BOT ===
       const reply = document.getElementById("gh-bot-reply");
-      const botData = BOT_KEYWORDS[videoId];
       const message = text.toLowerCase().trim();
+      let found = false;
 
-      if (botData && message.includes(botData.keyword.toLowerCase())) {
-        reply.textContent = botData.reply;
-      } else {
+      for (const key in BOT_KEYWORDS) {
+        if (message.includes(BOT_KEYWORDS[key].keyword.toLowerCase())) {
+          reply.textContent = BOT_KEYWORDS[key].reply;
+          found = true;
+          break;
+        }
+      }
+
+      if (!found) {
         reply.textContent = "3RROR_NIGHTM@R€_wR0NG_KEY";
       }
       reply.hidden = false;
