@@ -541,7 +541,7 @@ const BOT_KEYWORDS = {
   "FV-x2SRXozU": { keyword: "sP!T_It", reply: "u gon end up like the others" },
   "JfyQ9xlmqis": { keyword: "w1d3_B0dy", reply: "i wouldn't do that if i was you" },
   "tEkw3fYdJW0": { keyword: "b0NNie_bLU3", reply: "smash ur head on ur keyboard" },
-  "n95hUyCutIY": { keyword: "s1NNr", reply: "Réponse 10 ! 🖤" },
+  "n95hUyCutIY": { keyword: "s1NNr", reply: "https://youtu.be/W2Ae0MxW-WU" },
 };   
  function setupBotReply() {
     document.getElementById('gh-comment-form').addEventListener('submit', function(e) {
