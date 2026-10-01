@@ -543,19 +543,18 @@ const BOT_KEYWORDS = {
   "tEkw3fYdJW0": { keyword: "b0NNie_bLU3", reply: "smash ur head on ur keyboard" },
   "n95hUyCutIY": { keyword: "s1NNr", reply: "https://youtu.be/W2Ae0MxW-WU" },
 };   
- function setupBotReply() {
-    document.getElementById('gh-comment-form').addEventListener('submit', function(e) {
+function setupBotReply() {
+    const form = document.getElementById('gh-comment-form');
+    if (!form) return;  // ← si le formulaire n'existe pas (index.html), on sort
+
+    form.addEventListener('submit', function(e) {
       const message = document.getElementById('gh-comment-text').value.toLowerCase().trim();
       const reply = document.getElementById('gh-bot-reply');
       const currentVideo = getCurrentVideoId();
 
       const botData = BOT_KEYWORDS[currentVideo];
-      
-      console.log("Message:", message);
-      console.log("Vidéo actuelle:", currentVideo);
-      console.log("BotData:", botData);
 
-      if (botData && message.includes(botData.keyword.toLowerCase())) {   
+      if (botData && message.includes(botData.keyword.toLowerCase())) {
         reply.textContent = botData.reply;
       } else {
         reply.textContent = "3RROR_NIGHTM@R€_wR0NG_KEY";
@@ -565,7 +564,7 @@ const BOT_KEYWORDS = {
       document.getElementById('gh-comment-text').value = '';
       document.getElementById('gh-comment-name').value = '';
     });
-  }
+}
    document.addEventListener("DOMContentLoaded", () => {
     setupShowMore();
     setupVotes();
