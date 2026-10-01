@@ -551,7 +551,7 @@ const BOT_KEYWORDS = {
 
       const botData = BOT_KEYWORDS[currentVideo];
 
-      if (botData && message.includes(botData.keyword)) {
+      if (botData && message.includes(botData.keyword.toLowerCase())) {   
         reply.textContent = botData.reply;
       } else {
         reply.textContent = "3RROR_NIGHTM@R€_wR0NG_KEY";
