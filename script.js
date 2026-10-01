@@ -562,10 +562,10 @@ const BOT_KEYWORDS = {
       document.getElementById('gh-comment-name').value = '';
     });
   }
-    document.addEventListener("DOMContentLoaded", () => {
+   document.addEventListener("DOMContentLoaded", () => {
     setupShowMore();
     setupVotes();
+    setupBotReply();          // ← AVANT setupComments
     setupComments();
     renderVideo(getCurrentVideoId());
-  });
-})();
+});   
