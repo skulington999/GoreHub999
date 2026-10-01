@@ -550,6 +550,10 @@ const BOT_KEYWORDS = {
       const currentVideo = getCurrentVideoId();
 
       const botData = BOT_KEYWORDS[currentVideo];
+      
+      console.log("Message:", message);
+      console.log("Vidéo actuelle:", currentVideo);
+      console.log("BotData:", botData);
 
       if (botData && message.includes(botData.keyword.toLowerCase())) {   
         reply.textContent = botData.reply;
