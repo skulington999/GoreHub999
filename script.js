@@ -496,7 +496,8 @@ if (sideVideoList) {
       if (!name || !text) return;
 
       const videoId = getCurrentVideoId();
-
+      console.log("videoId:", videoId);
+      console.log("botData:", BOT_KEYWORDS[videoId]);
       // === BOT ===
       const reply = document.getElementById("gh-bot-reply");
       const botData = BOT_KEYWORDS[videoId];
