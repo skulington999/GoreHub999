@@ -547,16 +547,16 @@ if (sideVideoList) {
     getVideoData: () => VIDEO_DATA,
   };
 const BOT_KEYWORDS = {
-  "B7hlrfZaPKA": { keyword: "baDDi3_z0N3", reply: "u think ur smart?" },
-  "OC9sQplwkEQ": { keyword: "i_s33_sNak3S", reply: "i can prove u wrong" },
-  "HEHVE61D9XY": { keyword: "L3anSp1LL", reply: "i know u wont get through it" },
-  "Zn74gkZzXjc": { keyword: "pL4yaH", reply: "that's not no funny shit, it is gore" },
-  "IbAcili5q5Y": { keyword: "oFF_a_X", reply: "i know u wanna see blood" },
-  "QsJOZCS-_Ss": { keyword: "burnYOur3y3s", reply: "eat my guts" },
-  "FV-x2SRXozU": { keyword: "sP!T_It", reply: "u gon end up like the others" },
-  "JfyQ9xlmqis": { keyword: "w1d3_B0dy", reply: "i wouldn't do that if i was you" },
-  "tEkw3fYdJW0": { keyword: "b0NNie_bLU3", reply: "smash ur head on ur keyboard" },
-  "n95hUyCutIY": { keyword: "s1NNr", reply: "https://youtu.be/W2Ae0MxW-WU" },
+  "video1": { keyword: "baDDi3_z0N3", reply: "u think ur smart?" },
+  "video2": { keyword: "i_s33_sNak3S", reply: "i can prove u wrong" },
+  "video3": { keyword: "L3anSp1LL", reply: "i know u wont get through it" },
+  "video4": { keyword: "pL4yaH", reply: "that's not no funny shit, it is gore" },
+  "video5": { keyword: "oFF_a_X", reply: "i know u wanna see blood" },
+  "video6": { keyword: "burnYOur3y3s", reply: "eat my guts" },
+  "video7": { keyword: "sP!T_It", reply: "u gon end up like the others" },
+  "video8": { keyword: "w1d3_B0dy", reply: "i wouldn't do that if i was you" },
+  "video9": { keyword: "b0NNie_bLU3", reply: "smash ur head on ur keyboard" },
+  "video10": { keyword: "s1NNr", reply: "https://youtu.be/W2Ae0MxW-WU" },
 };   
 function setupBotReply() {
     const form = document.getElementById('gh-comment-form');
