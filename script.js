@@ -568,4 +568,5 @@ const BOT_KEYWORDS = {
     setupBotReply();          // ← AVANT setupComments
     setupComments();
     renderVideo(getCurrentVideoId());
-});   
+});
+})(); 
